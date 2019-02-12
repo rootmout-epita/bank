@@ -1,0 +1,7 @@
+Les 4 commandes à réaliser sont:
+git add .				//ajoute tous les fichiers
+git commit -m "Messagedecommit"		//réalise le commit...
+git pull				//Met à jour le dossier local
+git push				//envoi le commit ;)
+
+Done!
