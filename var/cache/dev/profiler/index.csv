@@ -1,3 +1,7 @@
 91b82c,127.0.0.1,GET,http://localhost:63342/test_project/public/index.php/?_ijt=ptbp642m1hhn0v5elp3p5d9gn7,1550694821,,404
 aa2d83,127.0.0.1,GET,http://localhost:63342/test_project/public/index.php/?_ijt=vfl8utpgqm29amojuoog28no7p,1550695125,,404
 1469c3,::1,GET,http://localhost/public/,1550695218,,404
+719ed4,::1,GET,http://localhost:8888/public,1550699060,1a2bff,200
+1a2bff,::1,GET,http://localhost:8888/public,1550699060,,404
+51464f,::1,GET,http://localhost:8888/public,1550699133,7b7f1b,200
+7b7f1b,::1,GET,http://localhost:8888/public,1550699133,,404
