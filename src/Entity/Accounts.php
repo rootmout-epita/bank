@@ -17,11 +17,6 @@ class Accounts
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $ID;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $Client;
@@ -39,13 +34,6 @@ class Accounts
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function setID(int $ID): self
-    {
-        $this->ID = $ID;
-
-        return $this;
     }
 
     public function getClient(): ?string

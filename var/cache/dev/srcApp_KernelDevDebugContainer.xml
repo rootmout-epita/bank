@@ -392,6 +392,14 @@
         <argument type="service" id=".service_locator.KTVqfp6.App\Controller\HomeController"/>
       </call>
     </service>
+    <service id="App\Repository\AccountsRepository" class="App\Repository\AccountsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -1939,6 +1947,14 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -2706,7 +2722,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.9_yeNH1"/>
+      <argument type="service" id=".service_locator.FmhGAH4"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -2982,7 +2998,14 @@
       <argument>none</argument>
     </service>
     <service id="security.encoder_factory.generic" class="Symfony\Component\Security\Core\Encoder\EncoderFactory" public="false">
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="App\Entity\User" type="collection">
+          <argument key="class">Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder</argument>
+          <argument key="arguments" type="collection">
+            <argument>13</argument>
+          </argument>
+        </argument>
+      </argument>
     </service>
     <service id="security.user_password_encoder.generic" class="Symfony\Component\Security\Core\Encoder\UserPasswordEncoder" public="false">
       <argument type="service" id="security.encoder_factory.generic"/>
@@ -3102,7 +3125,7 @@
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.token_storage"/>
       <argument type="iterator">
-        <argument type="service" id="security.user.provider.concrete.in_memory"/>
+        <argument type="service" id="security.user.provider.concrete.app_user_provider"/>
       </argument>
       <argument></argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -3404,8 +3427,11 @@
       <argument type="service" id="debug.event_dispatcher"/>
       <argument type="service" id="security.logout_url_generator"/>
     </service>
-    <service id="security.user.provider.concrete.in_memory" class="Symfony\Component\Security\Core\User\InMemoryUserProvider" public="false">
-      <argument type="collection"/>
+    <service id="security.user.provider.concrete.app_user_provider" class="Symfony\Bridge\Doctrine\Security\User\EntityUserProvider" public="false">
+      <argument type="service" id="doctrine"/>
+      <argument>App\Entity\User</argument>
+      <argument>email</argument>
+      <argument>null</argument>
     </service>
     <service id="security.firewall.map.config.dev" class="Symfony\Bundle\SecurityBundle\Security\FirewallConfig" public="false">
       <argument>dev</argument>
@@ -3436,7 +3462,7 @@
       <argument>null</argument>
       <argument>true</argument>
       <argument>false</argument>
-      <argument>security.user.provider.concrete.in_memory</argument>
+      <argument>security.user.provider.concrete.app_user_provider</argument>
       <argument>main</argument>
       <argument>null</argument>
       <argument>null</argument>
@@ -3449,7 +3475,7 @@
     <service id="security.context_listener.0" class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
       <argument type="service" id="security.token_storage"/>
       <argument type="iterator">
-        <argument type="service" id="security.user.provider.concrete.in_memory"/>
+        <argument type="service" id="security.user.provider.concrete.app_user_provider"/>
       </argument>
       <argument>main</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -3497,7 +3523,9 @@
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand" public="false">
       <tag name="console.command" command="security:encode-password"/>
       <argument type="service" id="security.encoder_factory.generic"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument>App\Entity\User</argument>
+      </argument>
       <call method="setName">
         <argument>security:encode-password</argument>
       </call>
@@ -4249,6 +4277,10 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AccountsRepository" class="App\Repository\AccountsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\AccountsRepository" class="App\Repository\AccountsRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="maker.auto_command.make_auth" class="Symfony\Bundle\MakerBundle\Command\MakerCommand" public="false">
       <tag name="console.command" command="make:auth"/>
       <argument type="service" id="maker.maker.make_authenticator"/>
@@ -4484,6 +4516,13 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
+      </argument>
+    </service>
+    <service id=".service_locator.FmhGAH4" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Repository\AccountsRepository" type="service" id="App\Repository\AccountsRepository"/>
+        <argument key="App\Repository\UserRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>
     </service>
     <service id="debug.security.voter.security.access.authenticated_voter" class="Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter">
@@ -5079,7 +5118,7 @@
     <service id="Symfony\Component\Security\Http\HttpUtils" alias="security.http_utils" public="false"/>
     <service id="Symfony\Component\Security\Guard\GuardAuthenticatorHandler" alias="security.authentication.guard_handler" public="false"/>
     <service id="security.firewall" alias="debug.security.firewall" public="false"/>
-    <service id="Symfony\Component\Security\Core\User\UserProviderInterface" alias="security.user.provider.concrete.in_memory"/>
+    <service id="Symfony\Component\Security\Core\User\UserProviderInterface" alias="security.user.provider.concrete.app_user_provider"/>
     <service id="security.authentication.session_strategy.main" alias="security.authentication.session_strategy"/>
     <service id="security.user_checker.main" alias="security.user_checker" public="false"/>
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>

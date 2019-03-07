@@ -34,23 +34,24 @@ class __TwigTemplate_63fe66e0dd0f444ddeedff7ab98851644481aaf48dc929a6fc5986a050d
 <html>
     <head>
         <meta charset=\"UTF-8\">
+        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
         <title>";
-        // line 5
+        // line 6
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         ";
-        // line 6
-        $this->displayBlock('stylesheets', $context, $blocks);
         // line 7
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 8
         echo "    </head>
     <body>
         ";
-        // line 9
-        $this->displayBlock('body', $context, $blocks);
         // line 10
+        $this->displayBlock('body', $context, $blocks);
+        // line 11
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 11
+        // line 12
         echo "    </body>
 </html>
 ";
@@ -62,7 +63,7 @@ class __TwigTemplate_63fe66e0dd0f444ddeedff7ab98851644481aaf48dc929a6fc5986a050d
 
     }
 
-    // line 5
+    // line 6
     public function block_title($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -80,7 +81,7 @@ class __TwigTemplate_63fe66e0dd0f444ddeedff7ab98851644481aaf48dc929a6fc5986a050d
 
     }
 
-    // line 6
+    // line 7
     public function block_stylesheets($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -97,7 +98,7 @@ class __TwigTemplate_63fe66e0dd0f444ddeedff7ab98851644481aaf48dc929a6fc5986a050d
 
     }
 
-    // line 9
+    // line 10
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -114,7 +115,7 @@ class __TwigTemplate_63fe66e0dd0f444ddeedff7ab98851644481aaf48dc929a6fc5986a050d
 
     }
 
-    // line 10
+    // line 11
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -138,7 +139,7 @@ class __TwigTemplate_63fe66e0dd0f444ddeedff7ab98851644481aaf48dc929a6fc5986a050d
 
     public function getDebugInfo()
     {
-        return array (  118 => 10,  101 => 9,  84 => 6,  66 => 5,  54 => 11,  51 => 10,  49 => 9,  45 => 7,  43 => 6,  39 => 5,  33 => 1,);
+        return array (  119 => 11,  102 => 10,  85 => 7,  67 => 6,  55 => 12,  52 => 11,  50 => 10,  46 => 8,  44 => 7,  40 => 6,  33 => 1,);
     }
 
     public function getSourceContext()
@@ -147,6 +148,7 @@ class __TwigTemplate_63fe66e0dd0f444ddeedff7ab98851644481aaf48dc929a6fc5986a050d
 <html>
     <head>
         <meta charset=\"UTF-8\">
+        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
@@ -155,6 +157,6 @@ class __TwigTemplate_63fe66e0dd0f444ddeedff7ab98851644481aaf48dc929a6fc5986a050d
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/Users/PierreK/test_project/templates/base.html.twig");
+", "base.html.twig", "/Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/base.html.twig");
     }
 }
