@@ -528,3 +528,8 @@
 [2019-03-07 16:51:24] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2019-03-07 16:51:24] request.INFO: Matched route "_wdt". {"route":"_wdt","route_parameters":{"_route":"_wdt","_controller":"web_profiler.controller.profiler::toolbarAction","token":"a26c18"},"request_uri":"http://localhost:8888/public/_wdt/a26c18","method":"GET"} []
 [2019-03-07 16:56:05] console.DEBUG: Command "make:fixtures" exited with code "1" {"command":"make:fixtures","code":1} []
+[2019-03-07 20:07:09] request.INFO: Matched route "app_home_index". {"route":"app_home_index","route_parameters":{"_route":"app_home_index","_controller":"App\\Controller\\HomeController::index"},"request_uri":"http://localhost:8888/public/","method":"GET"} []
+[2019-03-07 20:07:09] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2019-03-07 20:07:09] request.INFO: Matched route "_wdt". {"route":"_wdt","route_parameters":{"_route":"_wdt","_controller":"web_profiler.controller.profiler::toolbarAction","token":"897cab"},"request_uri":"http://localhost:8888/public/_wdt/897cab","method":"GET"} []
+[2019-03-07 20:07:14] request.INFO: Matched route "_profiler". {"route":"_profiler","route_parameters":{"_route":"_profiler","_controller":"web_profiler.controller.profiler::panelAction","token":"897cab"},"request_uri":"http://localhost:8888/public/_profiler/897cab?panel=twig","method":"GET"} []
+[2019-03-07 20:07:14] request.INFO: Matched route "_profiler_search_bar". {"route":"_profiler_search_bar","route_parameters":{"_route":"_profiler_search_bar","_controller":"web_profiler.controller.profiler::searchBarAction"},"request_uri":"http://localhost:8888/public/_profiler/search_bar?panel=twig","method":"GET"} []
