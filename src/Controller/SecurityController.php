@@ -43,6 +43,14 @@ class SecurityController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function login(){
-        return $this->render('seacurity/login.html.twig');
+        return $this->render('security/login.html.twig');
+    }
+
+
+    /**
+     * @Route("/logout", name="security_logout")
+     */
+    public function logout(){
+
     }
 }
