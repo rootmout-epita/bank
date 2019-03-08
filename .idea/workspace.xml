@@ -3,23 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="eac61de6-115d-46d0-a60a-f064fce667c0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Accounts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/registration.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/annotations.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/annotations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AccountsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AccountsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerCompiler.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerCompiler.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlGenerator.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlGenerator.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlMatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlMatcher.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlMatcher.php.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,36 +61,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="e#30#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/AccountsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="570">
+              <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding>
                 <element signature="e#34#58#0#PHP" expanded="true" />
-                <element signature="e#326#352#0#PHP" expanded="true" />
+                <element signature="e#947#973#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accounts" pinned="false" current-in-tab="false">
-        <entry file="das://a1369987-94eb-4238-9db1-43f2027da9d7/schema/bank/table/accounts">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/accounts/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/security/login.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#762#783#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,9 +141,10 @@
         <option value="$PROJECT_DIR$/src/Form/RegistrationFormType.php" />
         <option value="$PROJECT_DIR$/templates/security/registration.html.twig" />
         <option value="$PROJECT_DIR$/templates/pages/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Accounts.php" />
         <option value="$PROJECT_DIR$/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Controller/AccountsController.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Accounts.php" />
+        <option value="$PROJECT_DIR$/templates/accounts/index.html.twig" />
       </list>
     </option>
   </component>
@@ -280,7 +275,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="659" />
     <option name="width" value="621" />
     <option name="height" value="800" />
@@ -318,7 +313,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="ac&#9;FILE&#9;das://a1369987-94eb-4238-9db1-43f2027da9d7/schema/bank/table/accounts&#10;Acc&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Entity/Accounts.php&#10;Acco&#9;FILE&#9;das://a1369987-94eb-4238-9db1-43f2027da9d7/schema/bank/table/accounts&#10;use&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Entity/User.php&#10;home&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/pages/home.html.twig&#10;re&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/security/registration.html.twig&#10;sec&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Controller/SecurityController.php&#10;login&#9;null&#9;null&#10;log&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/security/login.html.twig&#10;hom&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/pages/home.html.twig&#10;UserIn&#9;null&#9;null&#10;user&#9;null&#9;null&#10;secu&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/config/packages/security.yaml&#10;Regis&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Form/RegistrationFormType.php&#10;env&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/.env&#10;templa&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates&#10;form&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Form/RegistrationFormType.php&#10;us&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Entity/User.php&#10;for&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Form&#10;fixtu&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/DataFixtures/UserFixtures.php&#10;doctrine&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/config/packages/doctrine.yaml" />
+    <property name="SearchEverywhereHistoryKey" value="lo&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/security/login.html.twig&#10;aco&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Controller/AccountsController.php&#10;user&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/vendor/symfony/security-core/User/UserInterface.php&#10;sec&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Controller/SecurityController.php&#10;reg&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/security/registration.html.twig&#10;ac&#9;FILE&#9;das://a1369987-94eb-4238-9db1-43f2027da9d7/schema/bank/table/accounts&#10;Acc&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Entity/Accounts.php&#10;Acco&#9;FILE&#9;das://a1369987-94eb-4238-9db1-43f2027da9d7/schema/bank/table/accounts&#10;use&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Entity/User.php&#10;home&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/pages/home.html.twig&#10;re&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/security/registration.html.twig&#10;login&#9;null&#9;null&#10;log&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/security/login.html.twig&#10;hom&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates/pages/home.html.twig&#10;UserIn&#9;null&#9;null&#10;secu&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/config/packages/security.yaml&#10;Regis&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Form/RegistrationFormType.php&#10;env&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/.env&#10;templa&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/templates&#10;form&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Form/RegistrationFormType.php&#10;us&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Entity/User.php&#10;for&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/Form&#10;fixtu&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/src/DataFixtures/UserFixtures.php&#10;doctrine&#9;FILE&#9;file:///Users/PierreK/OneDrive/BIBLIOTHEQUE/Documents/CodeWorkPlace/JetBrain/PhpstormProjects/Bank/config/packages/doctrine.yaml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -364,7 +359,7 @@
       <workItem from="1551842587962" duration="1775000" />
       <workItem from="1551910912943" duration="3087000" />
       <workItem from="1551928337326" duration="10673000" />
-      <workItem from="1551996791505" duration="15271000" />
+      <workItem from="1551996791505" duration="18072000" />
     </task>
     <task id="LOCAL-00001" summary="[TEST]-Server connexion 1">
       <created>1550006484504</created>
@@ -405,10 +400,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51676000" />
+    <option name="totallyTimeSpent" value="54477000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -417,7 +412,6 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.3368984" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.328877" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.49921876" weight="0.328877" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.3796875" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3296875" />
@@ -431,6 +425,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.49921876" weight="0.328877" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
@@ -487,7 +482,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/model/AccountDAO.php" />
     <entry file="file://$PROJECT_DIR$/model/User.php" />
     <entry file="file://$PROJECT_DIR$/model/UserDAO.php" />
     <entry file="file://$PROJECT_DIR$/model/AccountDAO.php" />
@@ -616,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/security-core/User/UserInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -648,30 +635,6 @@
           <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
           <folding>
             <element signature="e#1153#1197#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="32" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="e#236#250#0#Twig" expanded="true" />
-            <element signature="e#762#783#0#Twig" expanded="true" />
-            <element signature="e#687#691#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding>
-            <element signature="e#1041#1057#1#PHP" expanded="true" />
-            <element signature="e#1382#1408#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -704,27 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/registration.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="e#412#426#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Accounts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -739,6 +681,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/security-core/User/UserInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://a1369987-94eb-4238-9db1-43f2027da9d7/schema/bank/table/accounts">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -746,13 +712,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/security/registration.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AccountsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="570">
+          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding>
             <element signature="e#34#58#0#PHP" expanded="true" />
-            <element signature="e#326#352#0#PHP" expanded="true" />
+            <element signature="e#947#973#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#762#783#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/accounts/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

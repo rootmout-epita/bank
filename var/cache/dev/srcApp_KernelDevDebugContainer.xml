@@ -393,6 +393,7 @@
     <service id="App\Controller\AccountsController" class="App\Controller\AccountsController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\AccountsRepository"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.KTVqfp6.App\Controller\AccountsController"/>
       </call>
