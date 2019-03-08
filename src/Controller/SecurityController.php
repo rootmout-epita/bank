@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
@@ -42,8 +43,15 @@ class SecurityController extends AbstractController
      * @Route("/connexion", name="security_login")
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function login(){
-        return $this->render('security/login.html.twig');
+    public function login(AuthenticationUtils $authUtils){
+
+        $lastUsername = $authUtils->getLastUsername();
+        $error = $authUtils->getLastAuthenticationError();
+
+        return $this->render('security/login.html.twig', [
+            'last_username' => $lastUsername,
+            'error' => $error
+        ]);
     }
 
 
