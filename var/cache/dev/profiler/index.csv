@@ -405,3 +405,9 @@ f19d83,[::1],GET,http://localhost:8888/public/inscription,1552071153,,200
 17b0a3,[::1],GET,http://localhost:8888/public/connexion,1552072036,,200
 3a655a,[::1],POST,http://localhost:8888/public/connexion,1552072048,,302
 293232,[::1],GET,http://localhost:8888/public/,1552072048,,200
+8a2704,[::1],GET,http://localhost:8888/public/,1552072902,,200
+25f2c9,[::1],GET,http://localhost:8888/public/connexion,1552072906,,200
+7705c1,[::1],GET,http://localhost:8888/public/logout,1552072909,,302
+522999,[::1],GET,http://localhost:8888/public/connexion,1552072909,,200
+38be60,[::1],POST,http://localhost:8888/public/connexion,1552072916,,302
+9d3b7a,[::1],GET,http://localhost:8888/public/,1552072916,,200
