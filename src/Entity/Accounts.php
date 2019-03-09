@@ -88,4 +88,9 @@ class Accounts
 
         return $this;
     }
+
+    public function getFormatedBalance(): string
+    {
+        return number_format($this->getBalance(), 0, '', ' ');
+    }
 }

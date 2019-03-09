@@ -31,11 +31,12 @@ class AccountsController extends AbstractController
     {
         $user = $this->getUser();
         $account = $this->repository->findBy(['Client' => $user->getId()]);
-
+        $nbr_accounts = sizeof($account);
 
         return $this->render('accounts/index.html.twig', [
             'accounts' => $account,
             'user' => $user,
+            'nbr_accounts' => $nbr_accounts,
         ]);
     }
 }
