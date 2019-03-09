@@ -49,7 +49,6 @@ class Accounts
     public function setClient(string $Client): self
     {
         $this->Client = $Client;
-
         return $this;
     }
 
@@ -85,7 +84,6 @@ class Accounts
     public function setName(string $name): self
     {
         $this->name = $name;
-
         return $this;
     }
 

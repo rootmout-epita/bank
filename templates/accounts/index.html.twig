@@ -6,8 +6,12 @@
 
     <div class="container mt-4">
         <h1>Bonjour {{ user.getFirstname}} {{user.getName}}</h1>
+
+        <a href="{{ path('security_logout') }}" class="btn btn-danger">Déconnexion</a>
+
         <hr/>
         <h3>Gestion des comptes <span class="badge badge-secondary">{{ nbr_accounts }}</span></h3>
+        <a href="{{ path('new.accounts') }}" class="btn btn-primary" >Nouveau</a>
         <table class="table table-striped">
             <thead>
             <tr>
@@ -22,8 +26,12 @@
                     <td class="font-weight-bold">{{ account.formatedBalance }} €</td>
                     <td>{{ account.lastOperation|date("d/m/Y H:i:s") }}</td>
                     <td>
-                        <a href="#" class="btn btn-secondary">Modifier</a>
-                        <a href="#" class="btn btn-danger">Supprimer</a>
+                        <a href="{{ path('edit.accounts', {id: account.id}) }}" class="btn btn-secondary">Modifier</a>
+
+                        <form method="post" action="{{ path('edit.accounts', {id: account.id}) }}" style="display: inline-block">
+                            <button class="btn btn-danger">Supprimer</button>
+                            <input type="hidden" name="_method" value="DELETE">
+                        </form>
                     </td>
                 </tr>
             {% endfor %}

@@ -3,16 +3,14 @@
 namespace App\Controller;
 
 use App\Entity\Accounts;
-use App\Entity\User;
 use App\Form\AccountFormType;
 use App\Repository\AccountsRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class AccountsController extends AbstractController
 {
@@ -49,7 +47,7 @@ class AccountsController extends AbstractController
     }
 
     /**
-     * @Route("/accounts/{id}", name="edit.accounts")
+     * @Route("/accounts/edit/{id}", name="edit.accounts", methods="GET|POST")
      * @param Accounts $account
      * @return Response
      */
@@ -60,6 +58,7 @@ class AccountsController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid())
         {
+            $accounts->setLastOperation(new \DateTime());
             $this->em->flush();
             return $this->redirectToRoute('accounts');
         }
@@ -73,7 +72,7 @@ class AccountsController extends AbstractController
 
     /**
      * @Route("/accounts/new", name="new.accounts")
-     *
+     * @return Response
      */
     public function new(Request $request)
     {
@@ -83,14 +82,30 @@ class AccountsController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid())
         {
+            $account->setLastOperation(new \DateTime());
+            $account->setClient($this->getUser()->getId());
             $this->em->persist($account);
             $this->em->flush();
             return $this->redirectToRoute('accounts');
         }
 
-        return $this->render('accounts/new.html.twig', [
-            'account' => $accounts,
+        return $this->render('accounts/edit.html.twig', [
+            'account' => $account,
             'form' => $form->createView(),
         ]);
     }
+
+
+    /**
+     * @Route("/accounts/edit/{id}", name="delete.accounts", methods="DELETE")
+     * @param Accounts $account
+     * @return RedirectResponse
+     */
+    public function delete(Accounts $account)
+    {
+        $this->em->remove($account);
+        $this->em->flush();
+        return $this->redirectToRoute('accounts');
+    }
+
 }
