@@ -12,10 +12,8 @@ class AccountFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('Client')
-            ->add('Balance')
-            ->add('Last_Operation')
             ->add('name')
+            ->add('Balance')
         ;
     }
 
