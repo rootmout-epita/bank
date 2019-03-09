@@ -1,7 +1,33 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-test3
+
+
+
+    <div class="container mt-4">
+        <h1>Bonjour {{ user.getFirstname}} {{user.getName}}</h1>
+        <hr/>
+        <h3>Gestion des comptes</h3>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th><th>Balance</th><th>Dernière Opération</th><th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for account in accounts %}
+                <tr>
+                    <td>{{ account.id }}</td>
+                    <td>{{ account.balance }}</td>
+                    <td>{{ account.balance }}</td>
+                    <td><a href="#" class="btn btn-inactive">Nothing</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
 {% endblock %}
 
 {% block title %}
