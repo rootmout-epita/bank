@@ -2,8 +2,13 @@
 
 {% block body %}
 
-<h1>Bienvenue sur Bank, qui est une banque des plus simples.... je fais un test</h1>
-
-    <a href="{{ path('security_login') }}" class="btn btn-primary">Espace Client</a>
+    <div class="container text-center">
+        <div class="jumbotron">
+            <h1>Bank</h1>
+            <hr class="my-4">
+            <p>La simplicité au service de l'efficacité</p>
+            <a href="{{ path('security_login') }}" class="btn btn-primary">Espace Client</a>
+        </div>
+    </div>
 
 {% endblock body %}
