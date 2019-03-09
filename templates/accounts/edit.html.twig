@@ -6,11 +6,44 @@
 
 {% block body %}
     <div class="container mt-4">
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn btn-primary">Modifier</button>
-    {{ form_end(form) }}
+        <h3>Modification du compte</h3>
+        <br/>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <br/>
+
+        <div class="bg-light p-4">
+            <h5>Appliquer une transaction</h5>
+            <hr/>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Montant (EUR)</label>
+            <div class="input-group">
+                <input type="number" value="0" class="form-control" required name="transactionAmount">
+                <div class="input-group-append">
+                    <span class="input-group-text">€</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="ActionType" id="inlineRadio1" value="credit" checked="checked">
+            <label class="form-check-label" for="inlineRadio1"><span class="badge badge-success">CRÉDIT</span></label>
+
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="ActionType" id="inlineRadio2" value="debit">
+            <label class="form-check-label" for="inlineRadio2"><span class="badge badge-danger">DÉBIT</span></label>
+
+        </div>
+        </div>
+        <br/>
         <a href="{{ path('accounts') }}" class="btn btn-secondary">Retour</a>
+        <button class="btn btn-primary">Appliquer</button>
+        {{ form_end(form) }}
+
+
     </div>
 {% endblock %}
 

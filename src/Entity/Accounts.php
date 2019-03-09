@@ -36,6 +36,10 @@ class Accounts
      */
     private $name;
 
+    //public $modification_balance;
+
+    //public $is_added;
+
     public function getId(): ?int
     {
         return $this->id;

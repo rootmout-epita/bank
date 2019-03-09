@@ -58,9 +58,18 @@ class AccountsController extends AbstractController
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
+
+                $transactionAmount = $request->request->get('transactionAmount');
+                if($request->request->get('ActionType') == "debit")
+                {
+                    $transactionAmount *= -1;
+                }
+
+                $accounts->setBalance($accounts->getBalance()+$transactionAmount);
                 $accounts->setLastOperation(new \DateTime());
                 $this->em->flush();
                 $this->addFlash('success', 'Le compte a été mis à jour correctement.');
+                //return new Response('<body></body>');
                 return $this->redirectToRoute('accounts');
             }
 
