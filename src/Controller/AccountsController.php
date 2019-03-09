@@ -23,7 +23,6 @@ class AccountsController extends AbstractController
         $this->repository = $repository;
     }
 
-
     /**
      * @Route("/accounts", name="accounts")
      * @return Response
@@ -32,7 +31,7 @@ class AccountsController extends AbstractController
     {
         $user = $this->getUser();
         $account = $this->repository->findBy(['Client' => $user->getId()]);
-        dump($account);
+
 
         return $this->render('accounts/index.html.twig', [
             'accounts' => $account,

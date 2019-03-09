@@ -11,13 +11,14 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th>ID</th><th>Balance</th><th>Dernière Opération</th><th>Actions</th>
+                <th>ID</th><th>Nom</th><th>Balance</th><th>Dernière Opération</th><th>Actions</th>
             </tr>
             </thead>
             <tbody>
             {% for account in accounts %}
                 <tr>
                     <td>{{ account.id }}</td>
+                    <td>{{ account.name }}</td>
                     <td>{{ account.balance }}</td>
                     <td>{{ account.balance }}</td>
                     <td>
