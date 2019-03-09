@@ -53,20 +53,26 @@ class AccountsController extends AbstractController
      */
     public function edit(Accounts $accounts, Request $request)
     {
-        $form = $this->createForm(AccountFormType::class, $accounts);
-        $form->handleRequest($request);
+        if($accounts->getClient() == $this->getUser()->getId()) {
+            $form = $this->createForm(AccountFormType::class, $accounts);
+            $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid())
-        {
-            $accounts->setLastOperation(new \DateTime());
-            $this->em->flush();
+            if ($form->isSubmitted() && $form->isValid()) {
+                $accounts->setLastOperation(new \DateTime());
+                $this->em->flush();
+                $this->addFlash('success', 'Le compte a été mis à jour correctement.');
+                return $this->redirectToRoute('accounts');
+            }
+
+            return $this->render('accounts/edit.html.twig', [
+                'account' => $accounts,
+                'form' => $form->createView(),
+            ]);
+        }
+        else{
+            $this->addFlash('error', 'Vous ne pouvez pas modifier ce compte.');
             return $this->redirectToRoute('accounts');
         }
-
-        return $this->render('accounts/edit.html.twig', [
-            'account' => $accounts,
-            'form' => $form->createView(),
-        ]);
     }
 
 
@@ -86,6 +92,7 @@ class AccountsController extends AbstractController
             $account->setClient($this->getUser()->getId());
             $this->em->persist($account);
             $this->em->flush();
+            $this->addFlash('success', 'Le compte a été crée avec succès.');
             return $this->redirectToRoute('accounts');
         }
 
@@ -103,8 +110,16 @@ class AccountsController extends AbstractController
      */
     public function delete(Accounts $account)
     {
-        $this->em->remove($account);
-        $this->em->flush();
+        if($account->getClient() == $this->getUser()->getId())
+        {
+            $this->em->remove($account);
+            $this->em->flush();
+            $this->addFlash('success', 'Le compte a été supprimé avec succès.');
+        }
+        else
+        {
+            $this->addFlash('error', 'Vous ne pouvez pas supprimer ce compte.');
+        }
         return $this->redirectToRoute('accounts');
     }
 

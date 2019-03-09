@@ -12,6 +12,13 @@
         <hr/>
         <h3>Gestion des comptes <span class="badge badge-secondary">{{ nbr_accounts }}</span></h3>
         <a href="{{ path('new.accounts') }}" class="btn btn-primary" >Nouveau</a>
+
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">{{ message }}</div>
+        {% endfor %}
+        {% for message in app.flashes('error') %}
+            <div class="alert alert-danger">{{ message }}</div>
+        {% endfor %}
         <table class="table table-striped">
             <thead>
             <tr>
