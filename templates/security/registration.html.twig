@@ -1,17 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container mt-4">
-        <h1>Inscription sur le site</h1>
+    <div class="jumbotron vertical-center">
+        <div class="container text-center">
+            <h1>Inscription sur le site</h1>
 
-        {{ form_start(form) }}
+            {{ form_start(form) }}
 
-        {{ form_widget(form) }}
+            {{ form_widget(form) }}
 
-        <button type="submit" class="btn btn-success">Inscription</button>
-        {{ form_end(form) }}
-        <a href="{{ path('security_login') }}" class="btn btn-primary">Retour</a>
-
+            <button type="submit" class="btn btn-success">Inscription</button>
+            {{ form_end(form) }}
+            <a href="{{ path('security_login') }}" class="btn btn-primary">Retour</a>
+        </div>
     </div>
 
 
