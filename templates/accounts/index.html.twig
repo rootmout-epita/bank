@@ -24,7 +24,7 @@
                     <td>{{ account.id }}</td>
                     <td>{{ account.name }}</td>
                     <td class="font-weight-bold">{{ account.formatedBalance }} €</td>
-                    <td>{{ account.lastOperation|date("d/m/Y H:i:s") }}</td>
+                    <td>{{ account.lastOperation|date("d/m/Y H:i:s", "America/New_York") }}</td>
                     <td>
                         <a href="{{ path('edit.accounts', {id: account.id}) }}" class="btn btn-secondary">Modifier</a>
 
@@ -37,7 +37,7 @@
             {% endfor %}
             </tbody>
         </table>
-
+    <p>Time zone : America/New_York</p>
     </div>
 
 {% endblock %}
