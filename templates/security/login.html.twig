@@ -4,6 +4,7 @@
     <div class="container text-center">
         <div class="jumbotron ml-auto mr-auto mt-5" style="width: 400px">
             <h1>Connexion</h1>
+            <p>Bank, sweet bank...</p>
             <hr class="my-4">
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey }}</div>
@@ -19,10 +20,9 @@
                     </div>
                 </form>
             </div>
+            <p>Pas de compte ? <a href="{{ path('security_registration') }}">Inscrivez-vous</a> !</p>
         </div>
-
-        <p>Pas de compte ? <a href="{{ path('security_registration') }}">Inscrivez-vous</a> !</p>
-        <a href="{{ path('home') }}" class="btn btn-primary">Retour accueil</a>
+        <a href="{{ path('home') }}" class="btn btn-primary">Accueil du site</a>
 
     </div>
 

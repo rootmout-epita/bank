@@ -17,10 +17,11 @@
 
 {% block body %}
     <div class="text-center">
-        <div class="jumbotron jumbotron-fluid" style="background-image: url('{{ asset('build/img/home_wallpaper.png') }}'); background-size:cover; background-position: center">
-            <h1 class="text-white">EpiBanK®</h1>
+        <div class="jumbotron m-0 jumbotron-fluid" style="background-image: url('{{ asset('build/img/home_wallpaper.png') }}'); background-size:1500px; background-position: center">
+            <h1 class="text-white" style="font-size: 45px"><span class="bg-dark p-1">Epi<span style="color: #52a6ff">BanK®</span></span></h1>
             <br/>
-            <p class="text-white-50">Votre argent, notre expertise  !</p>
+            <p class="text-white" style="line-height: 1.8"><strong>Simple comme bonjour !</strong><br/><br>
+            Découvrez notre outil qui vous permets de créer <br/>des comptes bancaires factices et de <br/>les administrer comme bon vous semble</p>
             {% if app.user %}
                 <a href="{{ path('accounts') }}" class="btn btn-outline-light">Acceder à mon compte</a>
             {% else %}
@@ -28,19 +29,19 @@
             {% endif %}
 
         </div>
-    </div>
-    <div class="jumbotron">
-        <h3>Je suis un titre</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non magna ipsum. Etiam condimentum justo vel sapien
-            aliquet condimentum. Duis sit amet diam faucibus, tempor dui id, fringilla orci. Nulla efficitur eros ac elementum
-            lobortis. Aliquam erat volutpat. Cras iaculis pellentesque elit nec congue. Donec eros quam,
-            faucibus sit amet auctor eu, rhoncus at urna.</p>
 
-        <h3>Je suis un second titre</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non magna ipsum. Etiam condimentum justo vel sapien
-            aliquet condimentum. Duis sit amet diam faucibus, tempor dui id, fringilla orci. Nulla efficitur eros ac elementum
-            lobortis. Aliquam erat volutpat. Cras iaculis pellentesque elit nec congue. Donec eros quam,
-            faucibus sit amet auctor eu, rhoncus at urna.</p>
+        <div class="jumbotron jumbotron-fluid" style="background-image: url('{{ asset('build/img/home_wallpaper_2.jpg') }}'); background-size:1500px; background-position: center">
+            <h1 class="text-white"><span style="background-color: black" class="p-1">Totalement inutile pour vous...<br/><span style="color: #52a6ff">...mais indispensable pour nous</span></span></h1>
+            <br/>
+            <p class="text-white" style="line-height: 1.8">
+                <span style="background-color: black" class="p-2">EpiBanK c'est avant tout un projet scolaire dont le but premier est<br/>bien évidemment de permettre à ses créateurs (nous) de manipuler de nouvelles technologies.<br>Pour les utilisateurs (vous, donc) ce site ne contient malheureusement<br/> aucune récolution numérique majeur, mais contient plutôt un travail qui aura été réalisé avec soin<br/> et que nous vous présentons aujourd'hui avec grand plaisir ;)</span></p>
+            {% if app.user %}
+                <a href="{{ path('accounts') }}" class="btn btn-outline-light">Bien sûr que je veux acceder à mon compte !</a>
+            {% else %}
+                <a href="{{ path('security_registration') }}" class="btn btn-outline-light">Allez, on essaye !</a>
+            {% endif %}
+
+        </div>
     </div>
 
 {% endblock body %}
