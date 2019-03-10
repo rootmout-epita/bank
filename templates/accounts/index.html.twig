@@ -50,7 +50,7 @@
                     <td>
                         <a href="{{ path('edit.accounts', {id: account.id}) }}" class="btn btn-secondary">Modifier</a>
 
-                        <form method="post" action="{{ path('edit.accounts', {id: account.id}) }}" style="display: inline-block">
+                        <form method="post" onsubmit="return confirm('Confirmez-vous la suppression de ce compte ?')" action="{{ path('edit.accounts', {id: account.id}) }}" style="display: inline-block">
                             <button class="btn btn-danger">Supprimer</button>
                             <input type="hidden" name="_method" value="DELETE">
                         </form>
