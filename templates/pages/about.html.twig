@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}
+    À propos
+{% endblock %}
+
 {% block nav_rigtht %}
     {% if app.user %}
 
@@ -27,12 +31,12 @@
 
         <p style="line-height: 1.8">EpiBanK, application Web réalisée par <a href="http://kelbert.fr">Pierre KELBERT</a> et
             <a href="https://www.facebook.com/hugo.diguardia">Hugo DI GUARDIA</a> en mars 2019 pour le cours <a
-                    href="https://cours.uqac.ca/8INF345">8INF345</a> - Technologies Web avancées<br/>
+                    href="https://cours.uqac.ca/8INF345">8INF345</a> - Technologies Web avancées.<br/>
         L'application a été réalisé avec le framework <a href="https://symfony.com">Symfony</a>, le générateur de templates
             <a href="https://twig.symfony.com/doc/2.x/filters/date.html">Twig</a> ainsi que le thème CSS <a
-                    href="https://getbootstrap.com">Bootstrap</a>. Ces trois technologies ont été découvertes à l'occasion de la création de EpiBanK<br/>
+                    href="https://getbootstrap.com">Bootstrap</a>. Ces trois technologies ont été découvertes à l'occasion de la création de EpiBanK.<br/>
         Pour la gestion des versions du projet, un serveur git (<a href="https://about.gitlab.com">gitlab</a>) à été utilisé. <br>Le projet dans sa version de production (version publique accessible à l'adresse <kbd>lab.kelbert.fr/bank</kbd>) est hébergé par
-            <a href="https://www.ionos.fr/?ar=1">1&1 Ionos</a> (anciennement 1&1 Internet)</p><br><hr>
+            <a href="https://www.ionos.fr/?ar=1">1&1 Ionos</a> (anciennement 1&1 Internet).</p><br><hr>
         <p class="lead">Sources</p>
         Images:
         <ul>

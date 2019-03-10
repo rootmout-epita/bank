@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Home - EpiBanK
+    Accueil
 {% endblock %}
 
 {% block nav_rigtht %}
@@ -21,9 +21,9 @@
             <h1 class="text-white" style="font-size: 45px"><span class="bg-dark p-1">Epi<span style="color: #52a6ff">BanK®</span></span></h1>
             <br/>
             <p class="text-white" style="line-height: 1.8"><strong style="font-size: 20px; border-bottom: solid white 1px; border-top: solid white 1px">Simple comme bonjour !</strong><br/><br>
-            Découvrez notre outil qui vous permets de créer <br/>des comptes bancaires factices et de <br/>les administrer comme bon vous semble</p>
+            Découvrez notre outil qui vous permet de créer <br/>des comptes bancaires factices et de <br/>les administrer comme bon vous semble.</p>
             {% if app.user %}
-                <a href="{{ path('accounts') }}" class="btn btn-outline-light">Acceder à mon compte</a>
+                <a href="{{ path('accounts') }}" class="btn btn-outline-light">Accéder à mon compte</a>
             {% else %}
                 <a href="{{ path('security_registration') }}" class="btn btn-outline-light">Créer mon compte !</a>
             {% endif %}
@@ -34,9 +34,9 @@
             <h1 class="text-white"><span style="background-color: black" class="p-1">Totalement inutile pour vous...<br/><span style="color: #52a6ff">...mais indispensable pour nous</span></span></h1>
             <br/>
             <p class="text-white" style="line-height: 1.8">
-                <span style="background-color: black" class="p-2">EpiBanK c'est avant tout un projet scolaire dont le but premier est<br/>bien évidemment de permettre à ses créateurs (nous) de manipuler de nouvelles technologies.<br>Pour les utilisateurs (vous, donc) ce site ne contient malheureusement<br/> aucune révolution numérique majeur, mais contient plutôt un travail qui aura été réalisé avec soin<br/> et que nous vous présentons aujourd'hui avec grand plaisir (•‿•) <br/><br>Commencez par votre espace client:</span></p>
+                <span style="background-color: black" class="p-2">EpiBanK c'est avant tout un projet scolaire dont le but premier est<br/>bien évidemment de permettre à ses créateurs (nous) de manipuler de nouvelles technologies.<br>Pour les utilisateurs (vous, donc) ce site ne contient malheureusement<br/> aucune révolution numérique majeure, mais contient plutôt un travail qui aura été réalisé avec soin<br/> et que nous vous présentons aujourd'hui avec grand plaisir (•‿•) <br/><br>Commencez par votre espace client :</span></p>
             {% if app.user %}
-                <a href="{{ path('accounts') }}" class="btn btn-outline-light">Bien sûr que je veux acceder à mon compte !</a>
+                <a href="{{ path('accounts') }}" class="btn btn-outline-light">Bien sûr que je veux accéder à mon compte !</a>
             {% else %}
                 <a href="{{ path('security_registration') }}" class="btn btn-outline-light">Allez, on essaye !</a>
             {% endif %}
