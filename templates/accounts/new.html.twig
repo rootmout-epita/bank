@@ -1,10 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{% block title %}
 
 {% endblock %}
 
-{% block title %}
+{% block body %}
+    <div class="container mt-4">
+        <h3>Creation d'un nouveau compte</h3>
+        <br/>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <br/>
 
+        <a href="{{ path('accounts') }}" class="btn btn-secondary">Retour</a>
+        <button class="btn btn-primary">Appliquer</button>
+        {{ form_end(form) }}
+
+
+    </div>
 {% endblock %}
 

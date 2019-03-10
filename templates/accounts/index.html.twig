@@ -5,7 +5,7 @@
 
 
     <div class="container mt-4">
-        <h1>Bonjour {{ user.getFirstname}} {{user.getName}}</h1>
+        <h1>Bonjour <span class="text text-primary">{{ user.getFirstname}} {{user.getName}}</span></h1>
 
         <a href="{{ path('security_logout') }}" class="btn btn-danger">Déconnexion</a>
 
