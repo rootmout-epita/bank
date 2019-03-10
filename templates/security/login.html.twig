@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="container text-center">
-        <div class="jumbotron">
+        <div class="jumbotron ml-auto mr-auto" style="width: 400px">
             <h1>Connexion</h1>
             <hr class="my-4">
             {% if error %}
@@ -11,7 +11,7 @@
             <div class="container text-center">
                 <form action="{{ path('security_login') }}" method="post">
                     <div class="form-group">
-                        <input required placeholder="Email" name="_username" type="text" class="form-control"/>
+                        <input required placeholder="Email" name="_username" type="text" class="form-control"/><br/>
                         <input required placeholder="Mot de passe" name="_password" type="password" class="form-control"/>
                     </div>
                     <div class="form-group">

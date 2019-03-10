@@ -16,14 +16,31 @@
 {% endblock %}
 
 {% block body %}
+    <div class="text-center">
+        <div class="jumbotron jumbotron-fluid" style="background-image: url('{{ asset('build/img/home_wallpaper.png') }}'); background-size:cover; background-position: center">
+            <h1 class="text-white">EpiBank</h1>
+            <br/>
+            <p class="text-white-50">Votre argent, notre expertise  !</p>
+            {% if app.user %}
+                <a href="{{ path('accounts') }}" class="btn btn-outline-light">Acceder à mon compte</a>
+            {% else %}
+                <a href="{{ path('security_registration') }}" class="btn btn-outline-light">Créer mon compte !</a>
+            {% endif %}
 
-    <div class="container text-center">
-        <div class="jumbotron">
-            <h1>Bank</h1>
-            <hr class="my-4">
-            <p>La simplicité au service de l'efficacité</p>
-            <a href="{{ path('accounts') }}" class="btn btn-primary">Espace Client</a>
         </div>
+    </div>
+    <div class="jumbotron">
+        <h3>Je suis un titre</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non magna ipsum. Etiam condimentum justo vel sapien
+            aliquet condimentum. Duis sit amet diam faucibus, tempor dui id, fringilla orci. Nulla efficitur eros ac elementum
+            lobortis. Aliquam erat volutpat. Cras iaculis pellentesque elit nec congue. Donec eros quam,
+            faucibus sit amet auctor eu, rhoncus at urna.</p>
+
+        <h3>Je suis un second titre</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non magna ipsum. Etiam condimentum justo vel sapien
+            aliquet condimentum. Duis sit amet diam faucibus, tempor dui id, fringilla orci. Nulla efficitur eros ac elementum
+            lobortis. Aliquam erat volutpat. Cras iaculis pellentesque elit nec congue. Donec eros quam,
+            faucibus sit amet auctor eu, rhoncus at urna.</p>
     </div>
 
 {% endblock body %}

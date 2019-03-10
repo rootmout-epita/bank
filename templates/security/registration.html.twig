@@ -2,9 +2,10 @@
 
 {% block body %}
     <div class="container text-center">
-        <div class="jumbotron">
+        <div class="jumbotron ml-auto mr-auto" style="width: 400px">
 
-            <h1>Inscription sur le site</h1>
+            <h1>Inscription</h1>
+            <p>Créez votre propre compte !</p>
             <hr class="my-4">
 
             {{ form_start(form) }}
@@ -25,12 +26,12 @@
                     {{ form_row(form.confirm_password, {'label': ' ','attr': {placeholder: 'Confirmation mot de passe'}}) }}
                 </div>
             </div>
-
+<br/>
             {{ form_widget(form) }}
             <div class="row-fluid">
+                <a href="{{ path('security_login') }}" class="btn btn-primary">Retour</a>
                 <button type="submit" class="btn btn-success">Inscription</button>
                 {{ form_end(form) }}
-                <a href="{{ path('security_login') }}" class="btn btn-primary">Retour</a>
             </div>
         </div>
     </div>
