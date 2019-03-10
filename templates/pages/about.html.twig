@@ -13,11 +13,26 @@
 
 {% block body %}
     <div class="jumbotron">
-        <h1 class="display-4">À propos</h1>
+        <div class="row">
+            <div class="col">
+                <h1 class="display-4">À propos</h1>
+            </div>
+            <div class="col text-right my-auto">
+                <a href="{{ path('home') }}" class="btn btn-secondary">Retour à l'accueil</a>
+            </div>
+        </div>
 
-        <p>EpiBanK, application Web réalisé par Pierre KELBERT et Hugo DI GUARDIA en mars 2019 pour le cours 8INF345 - Technologies Web avancées<br/>
-        L'application a été réalisé avec le framework symfony, le générateur de templates Twig ainsi que le thème CSS Bootstrap. Ces trois technologies ont été découvertes à l'occasion de la création de EpiBanK<br/>
-        Pour la gestion efficace du projet, un serveur git (gitlab) à été utilisé et le projet dans sa version de production (version publique lab.kelbert.fr/bank) est hébergé par 1&1 Ionos (anciennement 1&1 Internet)</p><br>
+
+        <hr><br/>
+
+        <p style="line-height: 1.8">EpiBanK, application Web réalisée par <a href="http://kelbert.fr">Pierre KELBERT</a> et
+            <a href="https://www.facebook.com/hugo.diguardia">Hugo DI GUARDIA</a> en mars 2019 pour le cours <a
+                    href="https://cours.uqac.ca/8INF345">8INF345</a> - Technologies Web avancées<br/>
+        L'application a été réalisé avec le framework <a href="https://symfony.com">Symfony</a>, le générateur de templates
+            <a href="https://twig.symfony.com/doc/2.x/filters/date.html">Twig</a> ainsi que le thème CSS <a
+                    href="https://getbootstrap.com">Bootstrap</a>. Ces trois technologies ont été découvertes à l'occasion de la création de EpiBanK<br/>
+        Pour la gestion des versions du projet, un serveur git (<a href="https://about.gitlab.com">gitlab</a>) à été utilisé. <br>Le projet dans sa version de production (version publique accessible à l'adresse <kbd>lab.kelbert.fr/bank</kbd>) est hébergé par
+            <a href="https://www.ionos.fr/?ar=1">1&1 Ionos</a> (anciennement 1&1 Internet)</p><br><hr>
         <p class="lead">Sources</p>
         Images:
         <ul>
@@ -34,9 +49,7 @@
         </ul>
 
         <br/><br/>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Retour à l'accueil</a>
-        </p>
+            <a class="btn btn-secondary" href="#" role="button">Retour à l'accueil</a>
     </div>
 {% endblock %}
 
