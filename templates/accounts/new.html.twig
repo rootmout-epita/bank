@@ -9,7 +9,13 @@
         <h3>Creation d'un nouveau compte</h3>
         <br/>
         {{ form_start(form) }}
-        {{ form_widget(form) }}
+        <div class="">
+            {{ form_row(form.name, {'label': 'Nom du compte','attr': {placeholder: ''}}) }}
+        </div><br/>
+
+        <div class="">
+            {{ form_row(form.Balance, {'label': 'Balance initiale $ (CAD)','attr': {placeholder: ''}}) }}
+        </div>
         <br/>
 
         <a href="{{ path('accounts') }}" class="btn btn-secondary">Retour</a>
