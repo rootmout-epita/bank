@@ -102,7 +102,7 @@ class AccountsController extends AbstractController
             $this->em->persist($account);
             $this->em->flush();
             $this->addFlash('success', 'Le compte a été crée avec succès.');
-            return $this->redirectToRoute('accoun');
+            return $this->redirectToRoute('accounts');
         }
 
         return $this->render('accounts/new.html.twig', [
