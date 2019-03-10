@@ -7,6 +7,18 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{{ path('home') }}" style="font-size: 25px">Epi<span style="color: #52a6ff">BanK</span> </a>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+            {% block nav_rigtht %}{% endblock %}
+        </div>
+    </nav>
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
