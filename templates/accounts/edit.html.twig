@@ -9,8 +9,15 @@
         <h3>Modification du compte <span class="text text-primary">{{ account.name }}</span></h3>
         <br/>
         {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <br/>
+        <div class="">
+            {{ form_row(form.name, {'label': 'Nom du compte','attr': {placeholder: ''}}) }}
+        </div><br/>
+
+        <div class="">
+            {{ form_row(form.Balance, {'label': 'Modifer la balance','attr': {placeholder: ''}}) }}
+            <small id="emailHelp" class="form-text text-muted text-left">Permet de forcer la balance du compte</small>
+        </div>
+        <br/><br/>
 
         <div class="bg-light p-4">
             <h5><i class="fas fa-exchange-alt"></i> | Appliquer une transaction</h5>
