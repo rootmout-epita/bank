@@ -93,6 +93,16 @@ class Accounts
 
     public function getFormatedBalance(): string
     {
-        return number_format($this->getBalance(), 0, '', ' ');
+        $add = '';
+
+        if($this->getBalance() >= 0){
+            $add = '+';
+        }
+        return $add.number_format($this->getBalance(), 0, '', ' ');
+    }
+
+    public function getColorOfDisplay(): string
+    {
+        return $this->getBalance() >= 0 ? "text-success" : "text-danger";
     }
 }

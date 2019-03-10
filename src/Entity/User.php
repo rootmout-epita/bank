@@ -37,7 +37,7 @@ class User implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
-     * @Asserts\Length(min="1", minMessage="Votre mot de passe doit comporter au minimum 8 caractères")
+     * @Asserts\Length(min="8", minMessage="Votre mot de passe doit comporter au minimum 8 caractères")
      */
     private $password;
 
