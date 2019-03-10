@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block nav_rigtht %}
+    {% if app.user %}
+
+        <a href="{{ path('accounts') }}" class="btn btn-secondary mr-3">Mon Compte</a>
+        <a href="{{ path('security_logout') }}" class="btn btn-outline-secondary">Déconnexion</a>
+
+    {% else %}
+        <a href="{{ path('accounts') }}" class="btn btn-primary">Espace client</a>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+        <h1 class="display-4">À propos</h1>
+
+        <p>EpiBanK, application Web réalisé par Pierre KELBERT et Hugo DI GUARDIA en mars 2019 pour le cours 8INF345 - Technologies Web avancées<br/>
+        L'application a été réalisé avec le framework symfony, le générateur de templates Twig ainsi que le thème CSS Bootstrap. Ces trois technologies ont été découvertes à l'occasion de la création de EpiBanK<br/>
+        Pour la gestion efficace du projet, un serveur git (gitlab) à été utilisé et le projet dans sa version de production (version publique lab.kelbert.fr/bank) est hébergé par 1&1 Ionos (anciennement 1&1 Internet)</p><br>
+        <p class="lead">Sources</p>
+        Images:
+        <ul>
+            <li>Image_home_1 : <a href="http://wallpaperevo.com/?edmc=3471&key=1552190699">CIRCLES IN A NETWORK ABSTRACT 8K UHD WALLPAPER</a> <span class="badge badge-primary">wallpaperevo.com</span></li>
+            <li>Image_home_2 : <a href="https://wallpaperscraft.com/wallpaper/code_binary_code_glow_136085">Wallpaper code, binary code, glow, pattern</a> <span class="badge badge-primary">wallpaperscraft.com</span></li>
+        </ul>
+
+        Documentation:
+        <ul>
+            <li>Symfony'doc : <a href="https://symfony.com/doc/current/index.html#gsc.tab=0">Symfony Documentation</a> <span class="badge badge-primary">symfony.com</span></li>
+            <li>Bootstrap'doc : <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap Documentation</a> <span class="badge badge-primary">getbootstrap.com</span></li>
+            <li>Tutoriel gestion utilisateurs : <a href="https://youtu.be/_GjHWa9hQic">SYMFONY 4/4 : 1H POUR COMPRENDRE L'AUTHENTIFICATION !</a> <span class="badge badge-primary">youtube.com</span></li>
+            <li>Tutoriel symfony : <a href="https://www.grafikart.fr/formations/symfony-4-pratique">Symfony 4 par l'exemple</a> <span class="badge badge-primary">grafikart.fr</span></li>
+        </ul>
+
+        <br/><br/>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Retour à l'accueil</a>
+        </p>
+    </div>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
