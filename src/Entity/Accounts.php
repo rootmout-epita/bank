@@ -105,4 +105,9 @@ class Accounts
     {
         return $this->getBalance() >= 0 ? "text-success" : "text-danger";
     }
+
+    public function isOutOfRange():bool
+    {
+        return abs($this->getBalance()) > 2000000000;
+    }
 }

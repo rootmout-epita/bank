@@ -66,6 +66,13 @@ class AccountsController extends AbstractController
                 }
 
                 $accounts->setBalance($accounts->getBalance()+$transactionAmount);
+
+                if($accounts->isOutOfRange())
+                {
+                    $this->addFlash('error', 'Vous ne pouvez pas allez au-delas de ± 2 Milliards de $ sur un même compte...    ...ce qui est déjà pas mal');
+                    return $this->redirectToRoute('accounts');
+                }
+
                 $accounts->setLastOperation(new \DateTime());
                 $this->em->flush();
                 $this->addFlash('success', 'Le compte a été mis à jour correctement.');
@@ -97,6 +104,11 @@ class AccountsController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid())
         {
+            if($account->isOutOfRange())
+            {
+                $this->addFlash('error', 'Vous ne pouvez pas allez au-delas de ± 2 Milliards de $ sur un même compte...    veillez réessayer');
+                return $this->redirectToRoute('accounts');
+            }
             $account->setLastOperation(new \DateTime());
             $account->setClient($this->getUser()->getId());
             $this->em->persist($account);
@@ -130,6 +142,16 @@ class AccountsController extends AbstractController
             $this->addFlash('error', 'Vous ne pouvez pas supprimer ce compte.');
         }
         return $this->redirectToRoute('accounts');
+    }
+
+    public function checkIfOutOfRange(Accounts $account)
+    {
+        if ($account->isOutOfRange()){
+
+        }
+        else{
+            return null;
+        }
     }
 
 }
