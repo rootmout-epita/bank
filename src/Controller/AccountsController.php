@@ -106,7 +106,7 @@ class AccountsController extends AbstractController
         {
             if($account->isOutOfRange())
             {
-                $this->addFlash('error', 'Vous ne pouvez pas allez au-delas de ± 2 Milliards de $ sur un même compte...    veillez réessayer');
+                $this->addFlash('error', 'Vous ne pouvez pas allez au-delas de ± 2 Milliards de $ sur un même compte...    veuillez réessayer');
                 return $this->redirectToRoute('accounts');
             }
             $account->setLastOperation(new \DateTime());
