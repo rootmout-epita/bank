@@ -14,6 +14,9 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *     fields={"email"},
  *     message="Cet e-mail est déjà utilisé"
  * )
+ *
+ * Added for postgresql support since "user" can be confusing
+ * @ORM\Table(name="`user`")
  */
 class User implements UserInterface
 {
